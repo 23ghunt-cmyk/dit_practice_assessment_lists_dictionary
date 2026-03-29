@@ -4,7 +4,7 @@ def get_int(prompt):
             num = int(input(prompt))
             return num
         except ValueError:
-            print("Please enter a integer")
+            print("Please enter a integer.")
 
 def calculate_status(s):
     total = s["a"] + s["m"] + s["e"]
