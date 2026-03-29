@@ -101,11 +101,17 @@ while True:
                 print(f"{s['name']}: {endor} Endorsement")
 
     elif choice == "6":
-        yr = input("Enter Year Level to filter\n> ")
+        while True:
+            yr = get_int("Enter Year Level to filter\n> ")
+            if yr < 9 or yr > 13:
+                print("Please enter a valid year level")
+            else:
+                break
+        yr == str(yr)
         for s in students:
             if s["year"] == yr:
                 print(f"{s['name']} (Year {yr})")
 
     elif choice == "7":
-        print("alpabet soup")
+        print("Program stopped")
         break
