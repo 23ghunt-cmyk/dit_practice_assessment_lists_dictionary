@@ -1,3 +1,4 @@
+# Function to ensure user input is a valid integer
 def get_int(prompt):
     while True:
         try:
@@ -6,6 +7,7 @@ def get_int(prompt):
         except ValueError:
             print("Please enter a integer.")
 
+# Determine NCEA results based on credits
 def calculate_status(s):
     total = s["a"] + s["m"] + s["e"]
     passed = total >= 80
@@ -18,6 +20,7 @@ def calculate_status(s):
         
     return total, passed, endorsement
 
+# Initial list of student dictionaries (Database)
 students = [
     {"name": "Aria Thompson", "year": "11", "a": 40, "m": 25, "e": 20},
     {"name": "Ben Turoa", "year": "12", "a": 30, "m": 10, "e": 55},
@@ -41,6 +44,7 @@ students = [
     {"name": "Thomas White", "year": "12", "a": 85, "m": 0, "e": 0}
 ]
 
+# Main Program Loop
 while True:
     print("NCEA Student Management Menu")
     print("1. Add New Student")
@@ -53,6 +57,7 @@ while True:
     
     choice = input("\nSelect an option (1-8)\n> ").lower()
 
+# OPTION 1: CREATE
     if choice == "1":
         name = input("Name\n> ")
         while True:
@@ -68,6 +73,7 @@ while True:
         students.append({"name": name, "year": year, "a": a, "m": m, "e": e})
         print(f"Added {name} successfully.")
 
+# OPTION 2: UPDATE
     elif choice == "2":
         name = input("Enter student name to update\n> ")
         for s in students:
@@ -80,12 +86,14 @@ while True:
         else:
             print("Student not found.")
 
+# OPTION 3: PRINT ALL
     elif choice == "3":
         print("\n--- All Student Data ---")
         for s in students:
             total, _, _ = calculate_status(s)
             print(f"{s['name']} (Year {s['year']}): {total} total credits (A:{s['a']} M:{s['m']} E:{s['e']})")
 
+# OPTION 4: READ FILTERED (PASS/FAIL)
     elif choice == "4":
         print("\n--- Students Passed (80+ Credits) ---")
         for s in students:
@@ -93,6 +101,7 @@ while True:
             if passed:
                 print(f"{s['name']} - {total} credits")
 
+# OPTION 5: READ FILTERED (ENDORSEMENTS)
     elif choice == "5":
         print("\n--- Endorsement List ---")
         for s in students:
@@ -100,6 +109,7 @@ while True:
             if endor != "None":
                 print(f"{s['name']}: {endor} Endorsement")
 
+# OPTION 6: READ FILTERED (YEAR LEVEL)
     elif choice == "6":
         while True:
             yr = get_int("Enter Year Level to filter\n> ")
@@ -107,11 +117,12 @@ while True:
                 print("Please enter a valid year level")
             else:
                 break
-        yr == str(yr)
+        yr = str(yr)
         for s in students:
             if s["year"] == yr:
                 print(f"{s['name']} (Year {yr})")
 
+# OPTION 7: EXIT
     elif choice == "7":
         print("Program stopped")
         break
