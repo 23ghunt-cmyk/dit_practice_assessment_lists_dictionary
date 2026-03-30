@@ -61,7 +61,7 @@ while True:
     if choice == "1":
         name = input("Name\n> ")
         while True:
-            year = int(input("Year Level\n> "))
+            year = get_int("Year Level\n> ")
             if year < 9 or year > 13:
                 print("Please enter a valid year level")
             else:
