@@ -55,7 +55,7 @@ while True:
     print("6. Filter by Year Level")
     print("7. Exit")
     
-    choice = input("\nSelect an option (1-8)\n> ").lower()
+    choice = input("\nSelect an option (1-7)\n> ").lower()
 
 # OPTION 1: CREATE
     if choice == "1":
