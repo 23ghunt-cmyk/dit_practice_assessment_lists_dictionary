@@ -22,26 +22,26 @@ def calculate_status(s):
 
 # Initial list of student dictionaries (Database)
 students = [
-    {"name": "Aria Thompson", "year": "11", "a": 40, "m": 25, "e": 20},
-    {"name": "Ben Turoa", "year": "12", "a": 30, "m": 10, "e": 55},
-    {"name": "Chloe Smith", "year": "13", "a": 50, "m": 15, "e": 5},
-    {"name": "David Ngata", "year": "11", "a": 20, "m": 45, "e": 25},
-    {"name": "Elena Rodriguez", "year": "12", "a": 10, "m": 10, "e": 10},
-    {"name": "Finn O'Connor", "year": "13", "a": 35, "m": 35, "e": 15},
-    {"name": "Grace Lee", "year": "11", "a": 40, "m": 40, "e": 5},
-    {"name": "Hemi Walker", "year": "12", "a": 25, "m": 10, "e": 50},
-    {"name": "Isabella Chen", "year": "13", "a": 60, "m": 15, "e": 10},
-    {"name": "Jack Wilson", "year": "11", "a": 30, "m": 20, "e": 5},
-    {"name": "Kaia Williams", "year": "12", "a": 15, "m": 25, "e": 45},
-    {"name": "Liam Taylor", "year": "13", "a": 45, "m": 30, "e": 10},
-    {"name": "Mia Anderson", "year": "11", "a": 20, "m": 55, "e": 5},
-    {"name": "Noah Brown", "year": "12", "a": 50, "m": 5, "e": 2},
-    {"name": "Olivia Moore", "year": "13", "a": 10, "m": 10, "e": 70},
-    {"name": "Priya Patel", "year": "11", "a": 40, "m": 30, "e": 10},
-    {"name": "Quinn Davis", "year": "12", "a": 35, "m": 15, "e": 35},
-    {"name": "Riley Jones", "year": "13", "a": 20, "m": 20, "e": 20},
-    {"name": "Sophie Martin", "year": "11", "a": 10, "m": 40, "e": 40},
-    {"name": "Thomas White", "year": "12", "a": 85, "m": 0, "e": 0}
+    {"name": "Aria Thompson", "year": 11, "a": 40, "m": 25, "e": 20},
+    {"name": "Ben Turoa", "year": 12, "a": 30, "m": 10, "e": 55},
+    {"name": "Chloe Smith", "year": 13, "a": 50, "m": 15, "e": 5},
+    {"name": "David Ngata", "year": 11, "a": 20, "m": 45, "e": 25},
+    {"name": "Elena Rodriguez", "year": 12, "a": 10, "m": 10, "e": 10},
+    {"name": "Finn O'Connor", "year": 13, "a": 35, "m": 35, "e": 15},
+    {"name": "Grace Lee", "year": 11, "a": 40, "m": 40, "e": 5},
+    {"name": "Hemi Walker", "year": 12, "a": 25, "m": 10, "e": 50},
+    {"name": "Isabella Chen", "year": 13, "a": 60, "m": 15, "e": 10},
+    {"name": "Jack Wilson", "year": 11, "a": 30, "m": 20, "e": 5},
+    {"name": "Kaia Williams", "year": 12, "a": 15, "m": 25, "e": 45},
+    {"name": "Liam Taylor", "year": 13, "a": 45, "m": 30, "e": 10},
+    {"name": "Mia Anderson", "year": 11, "a": 20, "m": 55, "e": 5},
+    {"name": "Noah Brown", "year": 12, "a": 50, "m": 5, "e": 2},
+    {"name": "Olivia Moore", "year": 13, "a": 10, "m": 10, "e": 70},
+    {"name": "Priya Patel", "year": 11, "a": 40, "m": 30, "e": 10},
+    {"name": "Quinn Davis", "year": 12, "a": 35, "m": 15, "e": 35},
+    {"name": "Riley Jones", "year": 13, "a": 20, "m": 20, "e": 20},
+    {"name": "Sophie Martin", "year": 11, "a": 10, "m": 40, "e": 40},
+    {"name": "Thomas White", "year": 12, "a": 85, "m": 0, "e": 0}
 ]
 
 # Main Program Loop
@@ -117,7 +117,6 @@ while True:
                 print("Please enter a valid year level")
             else:
                 break
-        yr = str(yr)
         for s in students:
             if s["year"] == yr:
                 print(f"{s['name']} (Year {yr})")
